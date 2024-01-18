@@ -5,6 +5,18 @@ const StudentSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	name: {
+		type: String,
+		required: true,
+	},
+	email: {
+		type: String,
+		required: true,
+	},
+	password: {
+		type: String,
+		required: true,
+	},
 	followerIds: {
 		type: Array,
 		required: true,
@@ -44,6 +56,14 @@ const StudentSchema = new mongoose.Schema({
 	experience: {
 		type: Number,
 		required: true,
+	},
+	postIds: {
+		type: Array,
+		default: [],
+	},
+	followComms: {
+		type: Array,
+		default: [],
 	},
 });
 
