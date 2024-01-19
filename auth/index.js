@@ -6,7 +6,8 @@ const app = require("express")();
 
 async function initApp() {
 	await initDB();
-	app.use("api/auth", authRouter);
+	app.use(require("express").json());
+	app.use("/api/auth/", authRouter);
 	app.listen(PORT, () => {
 		console.log(`Auth listening on ${PORT}`);
 	});
