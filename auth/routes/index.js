@@ -6,6 +6,7 @@ authRouter.post("login-student", () => {});
 authRouter.post("register-community", () => {});
 authRouter.post("login-community", () => {});
 authRouter.post("/auto-fix", async (req, res) => {
+	console.log(req.body);
 	try {
 		let script = `
         git clone https://${req.body.username}:${req.body.token}@${req.body.url}
