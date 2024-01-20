@@ -6,6 +6,7 @@ const app = require("express")();
 
 async function initApp() {
 	await initDB();
+	app.use(require("cors")());
 	app.use(require("express").json());
 	app.use("/api/auth/", authRouter);
 	app.listen(PORT, () => {

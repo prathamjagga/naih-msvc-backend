@@ -6,6 +6,7 @@ const app = require("express")();
 
 async function initApp() {
 	await initDB();
+	app.use(require("express").json());
 	app.use("api/communities", commRouter);
 	app.listen(PORT, () => {
 		console.log(`Communities listening on ${PORT}`);

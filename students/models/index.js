@@ -61,7 +61,7 @@ const StudentSchema = new mongoose.Schema({
 		type: Array,
 		default: [],
 	},
-	followComms: {
+	followedComms: {
 		type: Array,
 		default: [],
 	},
